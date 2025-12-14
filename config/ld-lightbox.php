@@ -1,5 +1,5 @@
 <?php
 
 return [
-    // Default settings for ld-lightbox
+    // Default settings for sb-lightbox
 ];

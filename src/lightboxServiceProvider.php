@@ -11,14 +11,14 @@ class lightboxServiceProvider extends ServiceProvider
 {
     public function register(): void
     {
-        $this->mergeConfigFrom(__DIR__ . '/../config/ld-lightbox.php', 'ld-lightbox');
+        $this->mergeConfigFrom(__DIR__ . '/../config/sb-lightbox.php', 'sb-lightbox');
     }
 
     public function boot(): void
     {
-        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'ld-lightbox');
+        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'sb-lightbox');
 
-        Livewire::component('ld-lightbox', lightbox::class);
+        Livewire::component('sb-lightbox', lightbox::class);
 
         $this->loadViewComponentsAs('ld', [
             Bladelightbox::class,
@@ -26,12 +26,12 @@ class lightboxServiceProvider extends ServiceProvider
 
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__ . '/../config/ld-lightbox.php' => config_path('ld-lightbox.php'),
-            ], 'ld-lightbox-config');
+                __DIR__ . '/../config/sb-lightbox.php' => config_path('sb-lightbox.php'),
+            ], 'sb-lightbox-config');
 
             $this->publishes([
-                __DIR__ . '/../resources/views' => resource_path('views/vendor/ld-lightbox'),
-            ], 'ld-lightbox-views');
+                __DIR__ . '/../resources/views' => resource_path('views/vendor/sb-lightbox'),
+            ], 'sb-lightbox-views');
         }
     }
 }

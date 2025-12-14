@@ -56,6 +56,6 @@ class Lightbox extends Component
 
     public function render()
     {
-        return view('ld-lightbox::livewire.lightbox');
+        return view('sb-lightbox::livewire.lightbox');
     }
 }

@@ -13,6 +13,6 @@ class lightbox extends Component
 
     public function render()
     {
-        return view('ld-lightbox::components.lightbox');
+        return view('sb-lightbox::components.lightbox');
     }
 }

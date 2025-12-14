@@ -39,7 +39,7 @@
 import { ref, computed, onMounted, onUnmounted } from 'vue';
 
 export default {
-  name: 'LdLightbox',
+  name: 'SbLightbox',
   props: {
     images: { type: Array, default: () => [] },
     columns: { type: Number, default: 3 }
