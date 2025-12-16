@@ -1,10 +1,10 @@
 <?php
 
-namespace MrShaneBarron\lightbox\View\Components;
+namespace MrShaneBarron\Lightbox\View\Components;
 
 use Illuminate\View\Component;
 
-class lightbox extends Component
+class Lightbox extends Component
 {
     public function __construct()
     {

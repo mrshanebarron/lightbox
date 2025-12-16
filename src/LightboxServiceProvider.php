@@ -1,13 +1,13 @@
 <?php
 
-namespace MrShaneBarron\lightbox;
+namespace MrShaneBarron\Lightbox;
 
 use Illuminate\Support\ServiceProvider;
-use MrShaneBarron\lightbox\Livewire\lightbox;
-use MrShaneBarron\lightbox\View\Components\lightbox as Bladelightbox;
+use MrShaneBarron\Lightbox\Livewire\Lightbox;
+use MrShaneBarron\Lightbox\View\Components\Lightbox as BladeLightbox;
 use Livewire\Livewire;
 
-class lightboxServiceProvider extends ServiceProvider
+class LightboxServiceProvider extends ServiceProvider
 {
     public function register(): void
     {
@@ -18,10 +18,10 @@ class lightboxServiceProvider extends ServiceProvider
     {
         $this->loadViewsFrom(__DIR__ . '/../resources/views', 'sb-lightbox');
 
-        Livewire::component('sb-lightbox', lightbox::class);
+        Livewire::component('sb-lightbox', Lightbox::class);
 
         $this->loadViewComponentsAs('ld', [
-            Bladelightbox::class,
+            BladeLightbox::class,
         ]);
 
         if ($this->app->runningInConsole()) {
